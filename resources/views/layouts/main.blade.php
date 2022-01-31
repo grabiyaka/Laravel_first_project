@@ -28,6 +28,12 @@
                 <li class="nav-item">
                 <a class="nav-link" href="{{ route('post.index') }}">Не главная</a>
                 </li>
+
+                @can('view', auth()->user())
+                 <li class="nav-item">
+                <a class="nav-link" href="{{ route('admin.post.index') }}">Admin Panel</a>
+                </li>
+                @endcan
                 <li class="nav-item">
                 <a class="nav-link disabled">Disabled</a>
                 </li>

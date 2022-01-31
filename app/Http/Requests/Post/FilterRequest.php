@@ -28,6 +28,8 @@ class FilterRequest extends FormRequest
             'content' => 'string',
             //'image' => 'string',
             'category_id' => '',
+            'page' => '',
+            'per_page' =>''
             //'tags' => ''
         ];
     }
