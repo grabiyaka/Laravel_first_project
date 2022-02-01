@@ -11,17 +11,16 @@ class StoreController extends BaseController
 {
     public function __invoke(StoreRequest $request)
     {
+
         $data = $request->validated();
-        
         
         $post = $this->service->store($data);
 
-        $arr = [
-            
-        ];
-
-        return new PostResource($post);
+        return $post instanceof Post ? new PostResource($post) : $post;
         
         //return redirect()->route('post.index');
     }
+
 }
+
+
